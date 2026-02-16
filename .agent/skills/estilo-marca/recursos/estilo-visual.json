@@ -1,0 +1,50 @@
+{
+    "project_name": "SCIENTIFIC_SEED_BOUTIQUE",
+    "colors": {
+        "brand-beige": "#d6d1ca",
+        "brand-tan": "#b79e7e",
+        "brand-forest": "#243d34",
+        "brand-red": "#e8402a",
+        "primary": "#e8402a",
+        "accent": "#b79e7e",
+        "background-light": "#d6d1ca",
+        "background-dark": "#243d34",
+        "surface-dark": "#1b2e27",
+        "surface-darker": "#13211c",
+        "text-gray-100": "#f3f4f6",
+        "text-gray-400": "#9ca3af",
+        "white": "#ffffff"
+    },
+    "typography": {
+        "font-family": "Space Grotesk, sans-serif",
+        "headings": {
+            "h1": "text-5xl md:text-7xl font-bold uppercase tracking-tight leading-tight",
+            "h2": "text-3xl md:text-4xl font-bold uppercase tracking-widest",
+            "h3": "text-lg font-bold uppercase tracking-wide",
+            "label": "text-xs font-bold uppercase tracking-widest"
+        },
+        "body": "text-sm text-gray-400 font-light leading-relaxed"
+    },
+    "components": {
+        "button": {
+            "primary": "bg-primary text-background-dark font-bold uppercase tracking-widest rounded hover:bg-white transition-all duration-300",
+            "secondary": "bg-transparent border border-white/30 text-white font-medium uppercase tracking-widest rounded hover:bg-white/10 hover:border-white transition-colors",
+            "subscribe": "bg-white text-background-dark px-6 py-3 rounded font-bold uppercase tracking-widest hover:bg-primary transition-colors text-sm"
+        },
+        "card": {
+            "product": "group relative bg-surface-dark rounded-lg overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300",
+            "feature": "bg-background-dark p-8 rounded-lg border border-white/5 relative overflow-hidden"
+        },
+        "badge": "text-[10px] font-bold px-2 py-1 uppercase rounded-sm"
+    },
+    "effects": {
+        "glass-panel": "backdrop-blur-md bg-background-dark/50 border border-primary/30",
+        "technical-border": "border border-primary/20 relative after:content-[''] after:absolute after:-top-px after:-right-px after:w-2 after:h-2 after:border-t after:border-r after:border-primary",
+        "scan-line": "w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent animate-scan opacity-50 pointer-events-none"
+    },
+    "hierarchy_rules": {
+        "dominant_60": "Verde Forest (#243d34) - Usado en fondos principales y grandes superficies.",
+        "secondary_35": "Beige/Tan (#d6d1ca / #b79e7e) - Usado en superficies secundarias, textos, bordes técnicos y BOTONES.",
+        "accent_05": "Rojo (#e8402a) - Usado infinitesimalmente para alertas críticas, puntos de calor o indicadores de estado activo únicos."
+    }
+}
