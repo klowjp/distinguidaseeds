@@ -14,21 +14,20 @@
   <meta property="og:title" content="Distinguida Seeds — 100% Semillas F1 | Maestría Genética">
   <meta property="og:description"
     content="Especialistas exclusivos en Semillas F1. Maestría botánica y estabilidad genética garantizada.">
-  <meta property="og:image" content="./images/formula.png">
+  <meta property="og:image" content="./images/formula.webp">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://code.iconify.design; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"
     rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0a0a0a;
-    }
-
-    .font-serif {
-      font-family: 'Playfair Display', serif;
     }
 
     .font-bricolage {
@@ -769,7 +768,7 @@ scaleY(var(--tw-scale-y, 1))
         <a href="#" class="text-white hover:text-white transition-colors">
           Genética
         </a>
-        <a href="#projects" class="hover:text-white transition-colors">
+        <a href="#catalog" class="hover:text-white transition-colors">
           Semillas
         </a>
         <a href="#about" class="hover:text-white transition-colors">Nosotros</a>
@@ -781,16 +780,10 @@ scaleY(var(--tw-scale-y, 1))
 
       <!-- Actions -->
       <div class="flex items-center gap-2">
-        <button
-          class="w-10 h-10 rounded-full flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
-          <iconify-icon icon="solar:magnifer-linear" width="20" class=""></iconify-icon>
-        </button>
-        <button
-          class="relative w-10 h-10 rounded-full flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors group">
-          <iconify-icon icon="solar:menu-dots-square-linear" width="20" class=""></iconify-icon>
-          <span
-            class="absolute top-2 right-2 w-1.5 h-1.5 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-        </button>
+        <a href="#contact"
+          class="hidden md:block text-sm font-medium text-white/60 hover:text-white transition-colors mr-6">
+          Contacto
+        </a>
       </div>
     </nav>
   </div>
@@ -799,7 +792,7 @@ scaleY(var(--tw-scale-y, 1))
   <header class="relative w-full overflow-hidden flex flex-col justify-end pb-12 md:pb-24 min-h-screen md:h-screen">
     <!-- Background Image Layer with Cinematic Animation -->
     <div class="absolute inset-0 z-0 bg-black">
-      <video autoplay muted loop playsinline poster="./images/formula.png"
+      <video autoplay muted loop playsinline poster="./images/formula.webp"
         class="absolute inset-0 w-full h-full object-cover scale-[1.02] brightness-[0.7] saturate-[1.2] opacity-80">
         <source src="./images/formula.mp4" type="video/mp4">
       </video>
@@ -964,7 +957,7 @@ scaleY(var(--tw-scale-y, 1))
           class="group relative md:col-span-8 md:row-span-2 rounded-[2rem] overflow-hidden bg-white/[0.03] border border-white/10 shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:border-white/20 origin-left animate-on-scroll delay-200">
           <a href="product.html?id=distinguida" class="block w-full h-full">
             <div class="absolute inset-0 z-0">
-              <img src="./images/distinguida1.png"
+              <img src="./images/distinguida1.webp"
                 class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000 ease-out grayscale group-hover:grayscale-0"
                 alt="La Distinguida Cannabis Seeds">
               <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent"></div>
@@ -1032,7 +1025,7 @@ scaleY(var(--tw-scale-y, 1))
             class="group relative flex-1 rounded-[2rem] overflow-hidden bg-white/[0.03] border border-white/10 shadow-xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:border-white/20 origin-top animate-on-scroll delay-300">
             <a href="product.html?id=manjar" class="block w-full h-full">
               <div class="absolute inset-0 z-0">
-                <img src="./images/manjar1.png"
+                <img src="./images/manjar1.webp"
                   class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
                   alt="La Manjar Cannabis Seeds">
                 <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
@@ -1070,7 +1063,7 @@ scaleY(var(--tw-scale-y, 1))
             class="group relative flex-1 rounded-[2rem] overflow-hidden bg-white/[0.03] border border-white/10 shadow-xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:border-white/20 origin-bottom animate-on-scroll delay-400">
             <a href="product.html?id=toystone" class="block w-full h-full">
               <div class="absolute inset-0 z-0">
-                <img src="./images/toystone1.png"
+                <img src="./images/toystone1.webp"
                   class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
                   alt="La Toystone Cannabis Seeds">
                 <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
@@ -1108,7 +1101,7 @@ scaleY(var(--tw-scale-y, 1))
             class="group relative flex-1 rounded-[2rem] overflow-hidden bg-white/[0.03] border border-white/10 shadow-xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:border-white/20 origin-bottom animate-on-scroll delay-500">
             <a href="product.html?id=misterio" class="block w-full h-full">
               <div class="absolute inset-0 z-0">
-                <img src="./images/misterio1.jpeg"
+                <img src="./images/misterio1.webp"
                   class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
                   alt="La Misterio Cannabis Seeds">
                 <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
@@ -1700,13 +1693,13 @@ scaleY(var(--tw-scale-y, 1))
           <div id="nursery-gallery"
             class="flex-1 relative group h-[400px] w-full rounded-[2rem] overflow-hidden border border-white/10 bg-transparent">
             <div class="nursery-slides absolute inset-0">
-              <img src="./images/vivero1.png"
+              <img src="./images/vivero1.webp"
                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
                 alt="Vivero 1">
-              <img src="./images/vivero2.png"
+              <img src="./images/vivero2.webp"
                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
                 alt="Vivero 2">
-              <img src="./images/vivero3.png"
+              <img src="./images/vivero3.webp"
                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
                 alt="Vivero 3">
             </div>
@@ -1733,7 +1726,8 @@ scaleY(var(--tw-scale-y, 1))
         </p>
       </div>
 
-      <form class="space-y-6 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl">
+      <form action="mailto:klowjp@gmail.com?subject=DISTINGUIDASEEDS" method="post" enctype="text/plain"
+        class="space-y-6 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-2">
             <label class="text-[10px] uppercase tracking-widest text-white/40 ml-4 font-mono">Nombre</label>
@@ -1782,12 +1776,15 @@ scaleY(var(--tw-scale-y, 1))
                 class="text-white/40 hover:text-white transition-colors text-sm uppercase">Garantía</a></li>
             <li><a href="#shipping"
                 class="text-white/40 hover:text-white transition-colors text-sm uppercase">Envíos</a></li>
+            <li><a href="#contact"
+                class="text-white/40 hover:text-white transition-colors text-sm uppercase">Contacto</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="text-white font-mono text-xs uppercase tracking-widest mb-6">Métodos de Pago</h4>
-          <div class="flex items-center gap-4 opacity-40 grayscale brightness-200">
+          <div
+            class="flex items-center gap-4 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
             <iconify-icon icon="logos:bitcoin" width="24"></iconify-icon>
             <iconify-icon icon="logos:ethereum" width="18"></iconify-icon>
             <iconify-icon icon="logos:tether-icon" width="24"></iconify-icon>
@@ -1806,7 +1803,7 @@ scaleY(var(--tw-scale-y, 1))
   <script>
     /* Maestría Inquebrantable Carousel Implementation */
     (function () {
-      const images = ['./images/semilla.png', './images/carpa1.png', './images/carpa2.png', './images/carpa3.png'];
+      const images = ['./images/semilla.png', './images/carpa1.webp', './images/carpa2.webp', './images/carpa3.webp'];
       const track = document.getElementById('maestria-track');
       const dotsNav = document.getElementById('maestria-nav');
       const counterText = document.getElementById('maestria-counter');

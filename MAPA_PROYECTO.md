@@ -25,7 +25,7 @@ Este documento sirve como la única fuente de verdad para la estructura y nomenc
   - **Status Card (Bottom Left)**: Tarjeta simétrica pequeña con "Porcentaje de éxito" (99.9%) y barra de progreso.
   - **Scroll Indicator**: Animación de mouse al centro inferior.
 
-### 3. 🧬 Collection / Projects (`#projects`)
+### 3. 🧬 Collection / Catalog (`#catalog`)
 - **Título**: "Nuestra Colección."
 - **Nomenclatura**: Cepas F1.
 - **Filtros**: "Todas las Cepas", "Más Potentes", "Sabor & Aroma".

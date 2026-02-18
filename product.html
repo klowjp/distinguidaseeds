@@ -13,7 +13,10 @@
     <meta property="og:title" content="Distinguida Seeds — Maestría Genética en cada Semilla">
     <meta property="og:description"
         content="Explora nuestras cepas exclusivas F1. Calidad superior y estabilidad garantizada.">
-    <meta property="og:image" content="./images/formula.png">
+    <meta property="og:image" content="./images/formula.webp">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://code.iconify.design; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link
@@ -135,10 +138,7 @@
                 <span class="text-emerald-500/50">•</span>
                 <span class="text-white">Genética Certificada F1</span>
             </div>
-            <a href="index.html"
-                class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-                Cerrar
-            </a>
+            <!-- Removed Close Button to move next to Next Button -->
         </nav>
     </div>
 
@@ -174,7 +174,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-8 pt-4">
+                <div class="flex items-center gap-8 pt-4" id="product-actions">
                     <div>
                         <span class="block text-[10px] uppercase tracking-widest text-white/40 mb-1 font-mono">Precio
                             por Pack</span>
@@ -194,6 +194,21 @@
 
             <!-- Right Column: Visual Component -->
             <div class="relative">
+                <div class="flex justify-end gap-3 mb-4">
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-white/60 hover:bg-white hover:text-black hover:border-white transition-all group">
+                        <span>Cerrar</span>
+                        <iconify-icon icon="solar:close-circle-linear" width="14"
+                            class="group-hover:scale-110 transition-transform"></iconify-icon>
+                    </a>
+                    <a href="#" id="next-strain-btn"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-white/60 hover:bg-white hover:text-black hover:border-white transition-all group">
+                        <span>Siguiente</span>
+                        <iconify-icon icon="solar:arrow-right-linear" width="14"
+                            class="group-hover:translate-x-0.5 transition-transform"></iconify-icon>
+                    </a>
+                </div>
+
                 <div class="carousel-container group">
                     <div class="carousel-track" id="carousel-track">
                         <!-- Slides Populated by JS -->
@@ -300,12 +315,16 @@
                         <li><a href="index.html#shipping"
                                 class="text-white/40 hover:text-white transition-colors text-sm uppercase">Envíos</a>
                         </li>
+                        <li><a href="index.html#contact"
+                                class="text-white/40 hover:text-white transition-colors text-sm uppercase">Contacto</a>
+                        </li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-white font-mono text-xs uppercase tracking-widest mb-6">Métodos de Pago</h4>
-                    <div class="flex items-center gap-4 opacity-40 grayscale brightness-200">
+                    <div
+                        class="flex items-center gap-4 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                         <iconify-icon icon="logos:bitcoin" width="24"></iconify-icon>
                         <iconify-icon icon="logos:ethereum" width="18"></iconify-icon>
                         <iconify-icon icon="logos:tether-icon" width="24"></iconify-icon>
@@ -328,9 +347,9 @@
                 desc: 'Nuestra gema de la corona. Fruto de 30 años de perfeccionamiento genético continuo. Ofrece un equilibrio impecable entre vigor híbrido y producción masiva, con perfiles terpénicos únicos.',
                 price: '$35',
                 soldOut: true,
-                images: ['./images/distinguida2.png', './images/distinguida3.png', './images/distinguida4.png'],
+                images: ['./images/distinguida2.webp', './images/distinguida3.webp', './images/distinguida4.webp'],
                 stats: [
-                    { label: 'Potencia', value: '45% THC', icon: 'solar:bolt-bold-duotone' },
+                    { label: 'Potencia', value: '23% THC', icon: 'solar:bolt-bold-duotone' },
                     { label: 'Sabor', value: 'Máximo', icon: 'solar:star-fall-minimalistic-bold-duotone' },
                     { label: 'Floración', value: '8-9 Semanas', icon: 'solar:clock-circle-bold-duotone' },
                     { label: 'Estructura', value: 'Robusta', icon: 'solar:dna-bold-duotone' }
@@ -340,9 +359,9 @@
                 name: 'Manjar',
                 desc: 'Diseñada para los paladares más exigentes. Su nombre hace honor a la riqueza de su humo, denso y cargado de matices dulces y terrosos que perduran en el paladar.',
                 price: '$30',
-                images: ['./images/manjar2.png', './images/manjar3.png', './images/manjar4.png'],
+                images: ['./images/manjar2.webp', './images/manjar3.webp', './images/manjar4.webp'],
                 stats: [
-                    { label: 'Potencia', value: '38% THC', icon: 'solar:bolt-bold-duotone' },
+                    { label: 'Potencia', value: '22% THC', icon: 'solar:bolt-bold-duotone' },
                     { label: 'Sabor', value: 'Dulce / Terroso', icon: 'solar:star-fall-minimalistic-bold-duotone' },
                     { label: 'Rendimiento', value: 'XL Produce', icon: 'solar:box-bold-duotone' },
                     { label: 'Aroma', value: 'Intenso', icon: 'solar:wind-bold-duotone' }
@@ -352,9 +371,9 @@
                 name: 'Toystone',
                 desc: 'Fuerza bruta. Nuestra genética más potente a nivel estructural y psicotrópico. Ideal para quienes buscan un efecto demoledor y plantas que resisten condiciones extremas.',
                 price: '$30',
-                images: ['./images/toystone2.png', './images/toystone3.png', './images/toystone4.png'],
+                images: ['./images/toystone2.webp', './images/toystone3.webp', './images/toystone4.webp'],
                 stats: [
-                    { label: 'Potencia', value: '50%+', icon: 'solar:fire-bold-duotone' },
+                    { label: 'Potencia', value: '25% THC', icon: 'solar:fire-bold-duotone' },
                     { label: 'Sabor', value: 'Resinoso', icon: 'solar:star-fall-minimalistic-bold-duotone' },
                     { label: 'Defensas', value: 'Inmunidad F1', icon: 'solar:shield-check-bold-duotone' },
                     { label: 'Tipo', value: 'Indica Dom', icon: 'solar:dna-bold-duotone' }
@@ -364,12 +383,12 @@
                 name: 'Misterio',
                 desc: 'Un enigma genético que florece en colores púrpuras y aromas frutales explosivos. Cada fenotipo es una obra de arte botánica con un potencial terpénico infinito.',
                 price: '$30',
-                images: ['./images/misterio2.png', './images/misterio3.png', './images/misterio4.png'],
+                images: ['./images/misterio2.webp', './images/misterio3.webp', './images/misterio4.webp'],
                 stats: [
-                    { label: 'Potencia', value: '35% THC', icon: 'solar:bolt-bold-duotone' },
+                    { label: 'Potencia', value: '20% THC', icon: 'solar:bolt-bold-duotone' },
                     { label: 'Sabor', value: 'Exótico Frutal', icon: 'solar:star-fall-minimalistic-bold-duotone' },
                     { label: 'Aroma', value: 'Berry Mist', icon: 'solar:wind-bold-duotone' },
-                    { label: 'Color', value: 'Púrpura / Red', icon: 'solar:palet-2-bold-duotone' }
+                    { label: 'Color', value: 'Púrpura / Red', icon: 'solar:palette-bold-duotone' }
                 ]
             }
         };
@@ -442,6 +461,15 @@
             const id = urlParams.get('id') || 'distinguida';
             const data = strains[id];
 
+            // Next Strain Logic
+            const strainOrder = ['distinguida', 'manjar', 'toystone', 'misterio'];
+            const currentIndex = strainOrder.indexOf(id);
+            const nextIndex = (currentIndex + 1) % strainOrder.length;
+            const nextStrainId = strainOrder[nextIndex];
+
+            const nextBtn = document.getElementById('next-strain-btn');
+            if (nextBtn) nextBtn.href = `product.html?id=${nextStrainId}`;
+
             if (!data) return;
 
             document.getElementById('strain-name').textContent = data.name;
@@ -461,6 +489,31 @@
                 buyBtn.classList.add('bg-emerald-500', 'text-black', 'hover:bg-white', 'hover:scale-105', 'shadow-emerald-500/20');
                 buyBtn.classList.remove('bg-red-500/20', 'text-red-500', 'border', 'border-red-500/50', 'cursor-not-allowed');
                 document.getElementById('strain-price').classList.remove('opacity-40');
+            }
+
+            if (id === 'manjar') {
+                const buyBtn = document.querySelector('button.flex-1');
+                buyBtn.onclick = () => window.open('https://nowpayments.io/payment/?iid=5120737719&paymentId=6295244960', '_blank');
+                // Optional: Change text if desired, but user emphasized "same style". 
+                // Keeping text "Comprar Ahora" or changing it to something clear but identical style.
+                // Given the context of "pagar con crypto", making it clear is better UX, but user is angry about changes.
+                // "debe de haber solo un boton con el mismo estilo del boton q ya existia"
+                // I will keep the Text as "Comprar Ahora" to be safe, or maybe just append "(Crypto)"?
+                // No, let's just make it work. The user said "añade el boton para pagar en crypto".
+                // I'll change the text to "Pagar con Crypto" BUT keep the EXACT classes.
+                buyBtn.textContent = 'Pagar con Crypto';
+            }
+
+            if (id === 'toystone') {
+                const buyBtn = document.querySelector('button.flex-1');
+                buyBtn.onclick = () => window.open('https://nowpayments.io/payment/?iid=4823318938&paymentId=4330537463', '_blank');
+                buyBtn.textContent = 'Pagar con Crypto';
+            }
+
+            if (id === 'misterio') {
+                const buyBtn = document.querySelector('button.flex-1');
+                buyBtn.onclick = () => window.open('https://nowpayments.io/payment/?iid=4901562978&paymentId=4522677344', '_blank');
+                buyBtn.textContent = 'Pagar con Crypto';
             }
 
             populateStats(data);
