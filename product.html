@@ -140,6 +140,30 @@
             </div>
             <!-- Removed Close Button to move next to Next Button -->
         </nav>
+
+        <!-- Mobile Navigation Menu Toggle -->
+        <button id="mobile-menu-btn"
+            class="md:hidden absolute right-8 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 text-white/80 hover:text-white transition-colors"
+            aria-label="Abrir menú">
+            <iconify-icon icon="solar:hamburger-menu-linear" width="24"></iconify-icon>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black/95 z-[60] opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center backdrop-blur-3xl">
+        <button id="mobile-menu-close"
+            class="absolute top-8 right-6 w-12 h-12 flex items-center justify-center text-white/60 hover:text-white transition-colors rounded-full border border-white/10 bg-white/5">
+            <iconify-icon icon="solar:close-circle-linear" width="28"></iconify-icon>
+        </button>
+
+        <div class="flex flex-col items-center gap-8 text-2xl font-bricolage text-white/80">
+            <a href="index.html" class="hover:text-white transition-colors mobile-link">Inicio</a>
+            <a href="index.html#catalog" class="hover:text-white transition-colors mobile-link">Catálogo F1</a>
+            <a href="index.html#shipping" class="hover:text-white transition-colors mobile-link">Envíos</a>
+            <a href="index.html#contact"
+                class="hover:text-emerald-400 transition-colors mobile-link text-emerald-500 mt-4">Contacto Directo</a>
+        </div>
     </div>
 
     <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
@@ -518,7 +542,36 @@
 
             populateStats(data);
             initCarousel(data.images);
+            initMobileMenu();
         });
+
+        function initMobileMenu() {
+            const btnOpen = document.getElementById('mobile-menu-btn');
+            const btnClose = document.getElementById('mobile-menu-close');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            if (!btnOpen || !btnClose || !menu) return;
+
+            function openMenu() {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = '';
+            }
+
+            btnOpen.addEventListener('click', openMenu);
+            btnClose.addEventListener('click', closeMenu);
+
+            links.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
     </script>
 </body>
 
