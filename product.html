@@ -179,7 +179,7 @@
                         </span>
                         <span
                             class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[9px] uppercase tracking-widest text-white/40 font-mono">
-                            Pack: 10 Semillas
+                            Pack: 15 Semillas
                         </span>
                     </div>
 
@@ -192,7 +192,7 @@
                             <span
                                 class="text-[10px] uppercase tracking-widest text-emerald-500 font-bold block mb-1">Garantía
                                 de Calidad</span>
-                            <p class="text-xs text-white/40">Cada paquete contiene 10 semillas F1 seleccionadas a mano
+                            <p class="text-xs text-white/40">Cada paquete contiene 15 semillas F1 seleccionadas a mano
                                 bajo estándares olímpicos.</p>
                         </div>
                     </div>
@@ -286,22 +286,23 @@
                 </p>
             </div>
 
-            <form class="space-y-6 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl">
+            <form action="https://formsubmit.co/distinguidaseeds@gmail.com" method="POST"
+                class="space-y-6 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
                         <label class="text-[10px] uppercase tracking-widest text-white/40 ml-4 font-mono">Nombre</label>
-                        <input type="text" placeholder="TU NOMBRE"
+                        <input type="text" name="name" placeholder="TU NOMBRE" required
                             class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors uppercase tracking-[0.1em]">
                     </div>
                     <div class="space-y-2">
                         <label class="text-[10px] uppercase tracking-widest text-white/40 ml-4 font-mono">Email</label>
-                        <input type="email" placeholder="TU@EMAIL.COM"
+                        <input type="email" name="email" placeholder="TU@EMAIL.COM" required
                             class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors uppercase tracking-[0.1em]">
                     </div>
                 </div>
                 <div class="space-y-2">
                     <label class="text-[10px] uppercase tracking-widest text-white/40 ml-4 font-mono">Mensaje</label>
-                    <textarea rows="4" placeholder="¿EN QUÉ PODEMOS AYUDARTE?"
+                    <textarea name="message" rows="4" placeholder="¿EN QUÉ PODEMOS AYUDARTE?" required
                         class="w-full bg-white/5 border border-white/10 rounded-[2rem] px-6 py-4 text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors uppercase tracking-[0.1em] resize-none"></textarea>
                 </div>
                 <button type="submit"
@@ -356,9 +357,9 @@
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-white/20 text-[10px] font-mono uppercase tracking-widest">
-                    © 2024 Distinguida Seeds. Todos los derechos reservados.
+            <div class="pt-8 border-t border-white/5 flex w-full justify-center">
+                <p class="text-white/20 text-[10px] font-mono uppercase tracking-widest text-center">
+                    © 2026 Distinguida Seeds. Todos los derechos reservados.
                 </p>
             </div>
         </div>
@@ -369,7 +370,7 @@
             'distinguida': {
                 name: 'Distinguida',
                 desc: 'Nuestra gema de la corona. Fruto de 30 años de perfeccionamiento genético continuo. Ofrece un equilibrio impecable entre vigor híbrido y producción masiva, con perfiles terpénicos únicos.',
-                price: '$35',
+                price: '$350',
                 soldOut: true,
                 images: ['./images/distinguida2.webp', './images/distinguida3.webp', './images/distinguida4.webp'],
                 stats: [
@@ -382,7 +383,7 @@
             'manjar': {
                 name: 'Manjar',
                 desc: 'Diseñada para los paladares más exigentes. Su nombre hace honor a la riqueza de su humo, denso y cargado de matices dulces y terrosos que perduran en el paladar.',
-                price: '$30',
+                price: '$350',
                 images: ['./images/manjar2.webp', './images/manjar3.webp', './images/manjar4.webp'],
                 stats: [
                     { label: 'Potencia', value: '22% THC', icon: 'solar:bolt-bold-duotone' },
@@ -394,7 +395,8 @@
             'toystone': {
                 name: 'Toystone',
                 desc: 'Fuerza bruta. Nuestra genética más potente a nivel estructural y psicotrópico. Ideal para quienes buscan un efecto demoledor y plantas que resisten condiciones extremas.',
-                price: '$30',
+                price: '$350',
+                soldOut: true,
                 images: ['./images/toystone2.webp', './images/toystone3.webp', './images/toystone4.webp'],
                 stats: [
                     { label: 'Potencia', value: '25% THC', icon: 'solar:fire-bold-duotone' },
@@ -404,10 +406,10 @@
                 ]
             },
             'misterio': {
-                name: 'Misterio',
+                name: 'Kush x Distinguida',
                 desc: 'Un enigma genético que florece en colores púrpuras y aromas frutales explosivos. Cada fenotipo es una obra de arte botánica con un potencial terpénico infinito.',
-                price: '$30',
-                images: ['./images/misterio2.webp', './images/misterio3.webp', './images/misterio4.webp'],
+                price: '$350',
+                images: ['./images/misterio2.webp', './images/kdist1.png', './images/kdist2.png'],
                 stats: [
                     { label: 'Potencia', value: '20% THC', icon: 'solar:bolt-bold-duotone' },
                     { label: 'Sabor', value: 'Exótico Frutal', icon: 'solar:star-fall-minimalistic-bold-duotone' },
@@ -496,7 +498,15 @@
 
             if (!data) return;
 
-            document.getElementById('strain-name').textContent = data.name;
+            const nameEl = document.getElementById('strain-name');
+            nameEl.textContent = data.name;
+            if (data.name.length > 15) {
+                nameEl.classList.remove('text-7xl', 'md:text-9xl');
+                nameEl.classList.add('text-5xl', 'md:text-7xl');
+            } else {
+                nameEl.classList.add('text-7xl', 'md:text-9xl');
+                nameEl.classList.remove('text-5xl', 'md:text-7xl');
+            }
             document.getElementById('strain-desc').textContent = data.desc;
             document.getElementById('strain-price').textContent = data.price;
 
@@ -515,26 +525,19 @@
                 document.getElementById('strain-price').classList.remove('opacity-40');
             }
 
-            if (id === 'manjar') {
+            if (id === 'manjar' && !data.soldOut) {
                 const buyBtn = document.querySelector('button.flex-1');
                 buyBtn.onclick = () => window.open('https://nowpayments.io/payment/?iid=5120737719&paymentId=6295244960', '_blank');
-                // Optional: Change text if desired, but user emphasized "same style". 
-                // Keeping text "Comprar Ahora" or changing it to something clear but identical style.
-                // Given the context of "pagar con crypto", making it clear is better UX, but user is angry about changes.
-                // "debe de haber solo un boton con el mismo estilo del boton q ya existia"
-                // I will keep the Text as "Comprar Ahora" to be safe, or maybe just append "(Crypto)"?
-                // No, let's just make it work. The user said "añade el boton para pagar en crypto".
-                // I'll change the text to "Pagar con Crypto" BUT keep the EXACT classes.
                 buyBtn.textContent = 'Pagar con Crypto';
             }
 
-            if (id === 'toystone') {
+            if (id === 'toystone' && !data.soldOut) {
                 const buyBtn = document.querySelector('button.flex-1');
                 buyBtn.onclick = () => window.open('https://nowpayments.io/payment/?iid=4823318938&paymentId=4330537463', '_blank');
                 buyBtn.textContent = 'Pagar con Crypto';
             }
 
-            if (id === 'misterio') {
+            if (id === 'misterio' && !data.soldOut) {
                 const buyBtn = document.querySelector('button.flex-1');
                 buyBtn.onclick = () => window.open('https://nowpayments.io/payment/?iid=4901562978&paymentId=4522677344', '_blank');
                 buyBtn.textContent = 'Pagar con Crypto';
