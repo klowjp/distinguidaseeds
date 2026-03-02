@@ -406,7 +406,7 @@
                 ]
             },
             'misterio': {
-                name: 'Kush x Distinguida',
+                name: 'Hindu Kush x Zkitle x Distinguida',
                 desc: 'Un enigma genético que florece en colores púrpuras y aromas frutales explosivos. Cada fenotipo es una obra de arte botánica con un potencial terpénico infinito.',
                 price: '$350',
                 images: ['./images/misterio2.webp', './images/kdist1.png', './images/kdist2.png'],
@@ -500,12 +500,15 @@
 
             const nameEl = document.getElementById('strain-name');
             nameEl.textContent = data.name;
-            if (data.name.length > 15) {
-                nameEl.classList.remove('text-7xl', 'md:text-9xl');
+            if (data.name.length > 25) {
+                nameEl.classList.remove('text-7xl', 'md:text-9xl', 'text-5xl', 'md:text-7xl');
+                nameEl.classList.add('text-3xl', 'md:text-5xl');
+            } else if (data.name.length > 15) {
+                nameEl.classList.remove('text-7xl', 'md:text-9xl', 'text-3xl', 'md:text-5xl');
                 nameEl.classList.add('text-5xl', 'md:text-7xl');
             } else {
                 nameEl.classList.add('text-7xl', 'md:text-9xl');
-                nameEl.classList.remove('text-5xl', 'md:text-7xl');
+                nameEl.classList.remove('text-5xl', 'md:text-7xl', 'text-3xl', 'md:text-5xl');
             }
             document.getElementById('strain-desc').textContent = data.desc;
             document.getElementById('strain-price').textContent = data.price;
