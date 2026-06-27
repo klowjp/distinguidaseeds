@@ -965,7 +965,7 @@ scaleY(var(--tw-scale-y, 1))
 
     <div class="md:px-12 z-10 w-full max-w-7xl mr-auto ml-auto pr-6 pl-6 relative">
       <!-- Header -->
-      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="flex flex-col md:flex-row items-end mb-16 gap-8">
         <div class="relative animate-on-scroll">
           <div
             class="absolute -left-4 md:-left-8 top-1 bottom-1 w-1 bg-gradient-to-b from-emerald-500 to-transparent opacity-50">
@@ -982,20 +982,20 @@ scaleY(var(--tw-scale-y, 1))
             class="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-blue-500/20 to-purple-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500">
           </div>
           <div
-            class="relative flex items-center p-1.5 rounded-full bg-white/[0.03]/90 border border-white/10 backdrop-blur-xl shadow-2xl whitespace-nowrap min-w-max">
+            class="relative flex items-center p-1 rounded-full bg-white/[0.03]/90 border border-white/10 backdrop-blur-xl shadow-2xl whitespace-nowrap min-w-max">
             <button onclick="updateMissionFilter('all')" id="filter-all"
-              class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 bg-white text-neutral-950 shadow-lg shadow-white/5">
-              <iconify-icon icon="solar:globus-linear" width="14"></iconify-icon>
+              class="filter-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 flex items-center gap-1.5 bg-white text-neutral-950 shadow-lg shadow-white/5">
+              <iconify-icon icon="solar:globus-linear" width="10"></iconify-icon>
               Todas las Cepas
             </button>
             <button onclick="updateMissionFilter('potencia')" id="filter-potencia"
-              class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 text-white/50 hover:text-white hover:bg-white/5">
-              <iconify-icon icon="solar:bolt-bold-duotone" width="14"></iconify-icon>
+              class="filter-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 flex items-center gap-1.5 text-white/50 hover:text-white hover:bg-white/5">
+              <iconify-icon icon="solar:bolt-bold-duotone" width="10"></iconify-icon>
               Más Potentes
             </button>
             <button onclick="updateMissionFilter('sabor')" id="filter-sabor"
-              class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 text-white/50 hover:text-white hover:bg-white/5">
-              <iconify-icon icon="solar:star-fall-minimalistic-bold-duotone" width="14"></iconify-icon>
+              class="filter-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 flex items-center gap-1.5 text-white/50 hover:text-white hover:bg-white/5">
+              <iconify-icon icon="solar:star-fall-minimalistic-bold-duotone" width="10"></iconify-icon>
               Sabor & Aroma
             </button>
           </div>
@@ -1214,10 +1214,10 @@ scaleY(var(--tw-scale-y, 1))
 
           // Reset Buttons
           [btnAll, btnPotencia, btnSabor].forEach(b => {
-            if (b) b.className = 'filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 text-white/50 hover:text-white hover:bg-white/5';
+            if (b) b.className = 'filter-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 flex items-center gap-1.5 text-white/50 hover:text-white hover:bg-white/5';
           });
 
-          const activeClass = 'filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 bg-white text-neutral-950 shadow-lg shadow-white/5 scale-105';
+          const activeClass = 'filter-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 flex items-center gap-1.5 bg-white text-neutral-950 shadow-lg shadow-white/5 scale-105';
 
           // Define which cards belong to which category
           let visibleCards = [];
