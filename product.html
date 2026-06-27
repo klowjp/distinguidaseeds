@@ -15,7 +15,7 @@
         content="Explora nuestras cepas exclusivas F1. Calidad superior y estabilidad garantizada.">
     <meta property="og:image" content="./images/formula.webp">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://code.iconify.design; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+        content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://code.iconify.design https://www.aura.build; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -288,6 +288,8 @@
 
             <form action="https://formsubmit.co/distinguidaseeds@gmail.com" method="POST"
                 class="space-y-6 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_next" value="https://distinguidaseeds.com/">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
                         <label class="text-[10px] uppercase tracking-widest text-white/40 ml-4 font-mono">Nombre</label>

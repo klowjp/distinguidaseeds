@@ -1,0 +1,35 @@
+Construye teniendo cuidado en: 
+Frontend (no almacenar claves aquí)
+DB (RLS on)
+Auth (Permissions)
+Version control (git)
+APIs
+Hosting Deploy 
+Security
+Rate limiting
+Caching
+Scalling Cloud balancing
+Error tracking
+
+Reglas de seguridad:
+Nunca Exponer ApiKeys 
+Valida lo que escribe el usuario
+No construir autenticación mejor usar plataformas como supabase.
+Rate limits
+Protege tu database con reglas de acceso
+No sql injection
+Do not store sensitive data on the user table
+Do not store your .env files on the backend or frontend 
+Do not call API Keys from Frontend
+
+Guía Técnica de Arquitectura: 
+Paginación de APIs📋 Descripción General
+La paginación no es un elemento de diseño o UX; es una optimización crítica del backend y una responsabilidad de infraestructura. Devolver datasets completos destruye la performance del sistema, multiplicando por 10 el uso de memoria y por 5 la latencia. Una API sin paginación es un fallo crítico de escalabilidad actual, no un problema del futuro.🛠️ Enfoques de Paginación1. Paginación por Offset (Paginación Tradicional)Cómo funciona: Utiliza parámetros de página y límite (GET /users?page=2&limit=20) que el backend traduce a consultas SQL con LIMIT y OFFSET.Problema oculto: El offset no es una posición fija, es un conteo. La base de datos debe escanear, leer y descartar todas las filas anteriores ($N$) antes de devolver los resultados de la página solicitada.Ejemplo: OFFSET 100000 obliga a la DB a escanear 100,020 filas para mostrar solo 20, haciendo que las páginas profundas sean extremadamente lentas.Ventajas: Simple de implementar, familiar y permite saltar directamente a una página específica ($N$).2. Paginación por Cursor (Basada en Punteros)Cómo funciona: Rastrea la posición exacta del último elemento mediante un puntero único (ID, timestamp o un hash codificado) en lugar del número de página (GET /posts?cursor=eyJpZCI6MTIzfQ&limit=20).
+Ventajas: Rendimiento constante de velocidad constante $O(1)$ sin importar la profundidad del dataset, ya que la base de datos utiliza un índice directo (WHERE id > cursor). Evita duplicados o saltos de registros si los datos cambian en tiempo real.⚖️ Matriz de Decisión (Regla Práctica para el Agente)El agente debe elegir el método estrictamente según el patrón de acceso y navegación del usuario, no por simplicidad del código.Criterio / Caso de UsoPaginación por OffsetPaginación por CursorPaneles de Administración (Admin Panels)✅ Adecuado❌ No recomendadoBúsquedas con filtros✅ Adecuado❌ No recomendadoDatos Estáticos✅ Adecuado❌ No recomendadoFeeds en vivo o Redes Sociales❌ No recomendado✅ AdecuadoInfinite Scroll (Apps Móviles/Web)❌ No recomendado✅ AdecuadoAlta Concurrencia de Datos❌ No recomendado✅ AdecuadoDatasets Masivos / Grandes Volúmenes❌ No recomendado✅ AdecuadoSaltar a una página específica ($N$)✅ Permitido❌ ImposibleOrdenamiento Dinámico Complejo✅ Permitido❌ Complejo⚙️ Resumen de Implementación (Cheat Sheet)TypeScript// resumen.ts
+
+Offset   // Simple, pero lento a escala (Escaneo lineal)
+Cursor   // Operación O(1), escala al infinito (Uso de índices)
+
+// Regla de oro para el diseño de rutas:
+// admin panel / tablas internas -> utilizar offset
+// feed de datos / app de usuario final -> utilizar cursor
